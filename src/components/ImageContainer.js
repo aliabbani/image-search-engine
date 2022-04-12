@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import '../assets/styles.css'
-import flower from '../assets/images/sunflower.jpg'
 import { fetchImages } from '../redux/image/imageActions';
 import { useSelector, useDispatch } from 'react-redux';
 
