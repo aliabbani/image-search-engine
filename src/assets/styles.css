@@ -1,5 +1,5 @@
 body {
-  background-color : #eee;
+  background-color: #eee;
 }
 
 .main-container {
@@ -8,18 +8,20 @@ body {
 
 .main-input {
   width: 60%;
-  height: 1.5rem;
+  height: 2rem;
 }
 
-.image-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  padding-top: 1rem;
-}
+@media (min-width: 658px) {
+  .image-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-top: 1rem;
+  }
 
-.image-flower {
-  width: 435px;
-  height: 300px;
+  .image-flower {
+    width: 435px;
+    height: 300px;
+  }
 }

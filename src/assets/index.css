@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #eee;
+}
+
+@media (min-width: 915px) {
+    .image-flower {
+      width: 435px;
+      height: 300px;
+    }
+  }
