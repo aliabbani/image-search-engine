@@ -14,23 +14,28 @@ function ImageContainer() {
     }, []);
 
     const [query, setQuery] = useState("")
+
+    const handleChange = (event) => {
+        setQuery(event.target.value);
+    }
     return (
-        <div className="app">
-        <input placeholder="search title" onChange={event => setQuery(event.target.value)} />
-        {imageData
-            && imageData.images
-            && imageData.images.filter(post => {
-                if (query === '') {
-                    return post;
-                } else if (post.tags.toLowerCase().includes(query.toLowerCase())) {
-                    return post;
-                }
-            }).map((post, index) => (
-                <div className="box" key={index}>
-                    <img src={flower} alt='a' />
-                </div>
-            ))
-        }
+        <div className="main-container">
+            <input className="main-input" placeholder="search ..." onChange={handleChange} />
+            <div className="image-container">
+                {imageData
+                    && imageData.images
+                    && imageData.images.filter(post => {
+                        if (query === '') {
+                            return post;
+                        } else if (post.tags.toLowerCase().includes(query.toLowerCase())) {
+                            return post;
+                        }
+                    }).map((post, index) => (
+                        <div className="box" key={index}>
+                            <img className='image-flower' src={post.webformatURL} alt='a' />
+                        </div>
+                    ))}
+            </div>
         </div>
     );
 }

@@ -1,3 +1,25 @@
-.app {
-  background-color : white;
+body {
+  background-color : #eee;
+}
+
+.main-container {
+  padding-top: 1.5rem;
+}
+
+.main-input {
+  width: 60%;
+  height: 1.5rem;
+}
+
+.image-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding-top: 1rem;
+}
+
+.image-flower {
+  width: 435px;
+  height: 300px;
 }
