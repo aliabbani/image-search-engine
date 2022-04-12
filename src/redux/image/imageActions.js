@@ -1,5 +1,3 @@
-import axios from "axios"
-
 export const FETCH_IMAGES_REQUEST = 'FETCH_IMAGES_REQUEST'
 export const FETCH_IMAGES_SUCCESS = 'FETCH_IMAGES_SUCCESS'
 export const FETCH_IMAGES_FAILURE = 'FETCH_IMAGES_FAILURE'
@@ -24,20 +22,16 @@ const fetchImagesFailure = error => {
     }
 }
 
-export const fetchImages = () => {
-    return (dispatch) => {
-        dispatch(fetchImagesRequest())
-        axios.get('https://pixabay.com/api/?key=26680467-f23804cff8e6e49ca4c6bbb4c&q=yellow+flowers&image_type=photo')
-        .then(response => {
-            // response.data is the array of images
-            const images = response.data.hits
-            console.log('hello from image action', images)
-            dispatch(fetchImagesSuccess(images))
-        })
-        .catch(error => {
-            // error.message is the error description
-            const errorMsg = error.message
-            dispatch(fetchImagesFailure(errorMsg))
-        })
+export const fetchImages = () => async (dispatch) => {
+    dispatch(fetchImagesRequest())
+    try {
+        const request = await fetch('https://pixabay.com/api/?key=26680467-f23804cff8e6e49ca4c6bbb4c&q=yellow+flowers&image_type=photo');
+        const result = await request.json();
+        const images = result.hits
+        dispatch(fetchImagesSuccess(images))
+
+    } catch(error) {
+        const errorMsg = error.message
+        dispatch(fetchImagesFailure(errorMsg))
     }
 }

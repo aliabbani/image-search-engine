@@ -5,7 +5,6 @@ import { useSelector, useDispatch } from 'react-redux';
 
 function ImageContainer() {
     const imageData = useSelector((state) => state.image)
-    console.log("imageData in the image component", imageData)
 
     const dispatch = useDispatch();
     useEffect(() => {
