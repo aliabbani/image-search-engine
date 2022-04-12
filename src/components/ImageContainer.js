@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-// import '../assets/styles.css'
 import '../assets/index.css';
 import { fetchImages } from '../redux/image/imageActions';
 import { useSelector, useDispatch } from 'react-redux';
