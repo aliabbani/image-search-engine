@@ -46,7 +46,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Live Demo
 
-[Live Demo](https://aliabbani.github.io/image-search-engine/)
+[Live Demo](https://image-search-engine008.herokuapp.com/)
 
 ## Author
 
