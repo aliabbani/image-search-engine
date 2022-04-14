@@ -21,11 +21,6 @@ Documentation : https://pixabay.com/api/docs/
 Example : 
 https://pixabay.com/api/?key=17555297-46a99d3dc7abf78679ec9e640&q=yellow+flowers&image_type=photo&pretty=true
 
-
-### Homepage
-![screenshot](./src/assets/images/Capture-desktop.PNG)
-![screenshot](./src/assets/images/Capture-mobile.PNG)
-
 ## Getting started :
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and Redux Library.
 
