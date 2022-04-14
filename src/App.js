@@ -12,7 +12,7 @@ function App() {
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
-        'https://pixabay.com/api/?key=26680467-f23804cff8e6e49ca4c6bbb4c&image_type=photo'
+        'https://pixabay.com/api/?key=26680467-f23804cff8e6e49ca4c6bbb4c&q=all&image_type=photo'
       );
       const data = await response.json();
       const { hits } = data;
