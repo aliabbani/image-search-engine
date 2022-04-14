@@ -17,7 +17,6 @@ function App() {
       const data = await response.json();
       const { hits } = data;
       setQuery(() => hits);
-      console.log('here our new hits', hits);
     }
     fetchData();
   }, []);
