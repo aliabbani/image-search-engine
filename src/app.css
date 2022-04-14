@@ -11,4 +11,8 @@ body {
       width: 435px;
       height: 300px;
     }
-  }
+
+    .input-idea:focus {
+      outline: none;
+    }
+}
