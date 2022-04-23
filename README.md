@@ -41,7 +41,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ## Live Demo
 
-[Live Demo](https://image-search-engine008.herokuapp.com/)
+[Live Demo](https://visionary-nasturtium-ee0c00.netlify.app/)
 
 ## Author
 
